@@ -5,7 +5,7 @@ element1.id = "first";
 console.log(element1);
 
 const root = document.getElementById('root');
-root.append(element1); */
+root.append(element1); 
 
 
 function App(){
@@ -19,5 +19,17 @@ function App(){
 
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
-root.render(<App/>);
+root.render(<App/>);*/
+
+function App(name) {
+    return(
+        <>
+         <h1>Hello {name}</h1>
+         <h2>How are you {name} ?</h2>
+        </>
+    );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(App("Shivang"));
 
