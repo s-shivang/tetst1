@@ -41,7 +41,7 @@ const element = (<ul>
                 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(element);   */        
+root.render(element);          
 
 
 function App(props){
@@ -51,4 +51,43 @@ function App(props){
 const element = <App name='Shivang' age={21}></App>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(element);
+root.render(element);   */ 
+
+
+
+function Header({name}){
+    return(
+        <h1>{name} Welcome to India!</h1>
+    );
+}
+
+function Main({country, slogan}){
+    return(
+        <h2> This is main part of {country} and it is very {slogan}</h2>
+    );
+}
+
+
+function Footer({notes}){
+    return(
+        <>
+          <p>This is a South part of the {notes.nation}</p>
+          <p>It is also known as {notes.suffix} </p>
+        </>
+    );
+
+}
+
+
+function App() {
+   return (
+    <>
+        <Header name="Shivang"></Header>
+        <Main country="India" slogan="Beautiful"></Main>
+        <Footer notes={{nation:"India", suffix:"SouthIndia"}}></Footer>
+    </>
+   );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
