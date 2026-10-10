@@ -19,7 +19,7 @@ function App(){
 
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
-root.render(<App/>);*/
+root.render(<App/>);
 
 function App(name) {
     return(
@@ -31,5 +31,15 @@ function App(name) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(App("Shivang"));
+root.render(App("Shivang"));  */
+
+const course = ["HTML", "CSS", "JavaScript", "React"];
+
+const element = (<ul>
+                  {course.map(course=><li>{course}</li>)}
+                 </ul>
+                );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);             
 
