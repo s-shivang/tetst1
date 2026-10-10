@@ -31,7 +31,7 @@ function App(name) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(App("Shivang"));  */
+root.render(App("Shivang"));  
 
 const course = ["HTML", "CSS", "JavaScript", "React"];
 
@@ -41,5 +41,14 @@ const element = (<ul>
                 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(element);             
+root.render(element);   */        
 
+
+function App(props){
+    return <h1>Hello Coder {props.name} {props.age}</h1>;
+}
+
+const element = <App name='Shivang' age={21}></App>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
